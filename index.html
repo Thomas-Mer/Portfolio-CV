@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T M | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <!-- Firebase App (the core Firebase SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <!-- Firestore -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script>
+    // TODO: Replace with your Firebase config (from Firebase Console > Project settings > Web app)
+    const firebaseConfig = {
+      apiKey: "AIzaSyBP0JiMH-XrxrnTavoxQ9o1Afy46ve-IS8",
+      authDomain: "portfolio-reviews-170ca.firebaseapp.com",
+      projectId: "portfolio-reviews-170ca",
+      // ...other config
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+</head>
+<body class="dark-theme">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <span class="nav-logo">Thomas M</span>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" aria-label="Toggle day/night mode">
+        <span class="theme-icon">🌙</span>
+      </button>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="clouds">
+      <div class="cloud cloud1"></div>
+      <div class="cloud cloud2"></div>
+      <div class="cloud cloud3"></div>
+    </div>
+    <div class="hero-content">
+      <h1>Thomas M</h1>
+      <h2>Creative Developer</h2>
+      <p>Building immersive digital experiences</p>
+    </div>
+  </section>
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate developer who believes in the power of creativity and technology to shape a better world. My journey began with curiosity and a desire to build things that matter. Over the years, I have honed my skills in crafting immersive digital experiences that inspire, engage, and empower.
+    </p>
+    <p>
+      I thrive on challenges and see every project as an opportunity to learn, grow, and make a positive impact. Whether it's designing elegant interfaces, solving complex problems, or collaborating with others, I bring energy, empathy, and a relentless drive for excellence to everything I do.
+    </p>
+    <p>
+      My mission is simple: to create work that not only looks beautiful but also makes a difference. Let's build something extraordinary together.
+    </p>
+  </section>
+  <!-- Skills/Tech Stack Section -->
+  <section id="skills">
+    <h2>Skills & Tech Stack</h2>
+    <div class="skills-grid">
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript"><span>JavaScript</span></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript"><span>TypeScript</span></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5"><span>HTML5</span></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3"><span>CSS3</span></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" title="Firebase"><span>Firebase</span></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js"><span>Node.js</span></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React"><span>React</span></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gsap/gsap-original.svg" alt="GSAP" title="GSAP"><span>GSAP</span></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" title="Git"><span>Git</span></div>
+      <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" title="Linux"><span>Linux</span></div>
+    </div>
+  </section>
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2><span class="projects-logo">🚀</span> Projects</h2>
+    <div class="projects-grid">
+      <!-- Sample Improved Project Card -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="Animated Portfolio Screenshot">
+          <div class="project-logo">🌈</div>
+        </div>
+        <div class="project-info">
+          <h3>Animated Portfolio</h3>
+          <p>A one-page portfolio with GSAP animations, custom cursor, and dark/light mode. Built with vanilla JS and CSS.</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>GSAP</span><span>JavaScript</span>
+          </div>
+          <a href="#" target="_blank">Live Demo</a>
+          <a href="#" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <!-- Tic-Tac-Toe Game Project Card -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Tic-Tac-Toe App Screenshot">
+          <div class="project-logo">❌⭕</div>
+        </div>
+        <div class="project-info">
+          <h3>Tic-Tac-Toe Game</h3>
+          <p>A simple, fully functional Tic-Tac-Toe game with interactive UI and win detection. Play against a friend in your browser!</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <a href="#tic-tac-toe-demo" class="open-tic-tac-toe">Live Demo</a>
+        </div>
+      </div>
+      <!-- To-Do App Project Card -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="To-Do App Screenshot">
+          <div class="project-logo">📝</div>
+        </div>
+        <div class="project-info">
+          <h3>To-Do App</h3>
+          <p>A simple, fully functional To-Do app with add, complete, and delete features. Your tasks are saved in your browser!</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <a href="#todo-app-demo" class="open-todo-app">Live Demo</a>
+        </div>
+      </div>
+      <!-- Calculator App Project Card -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Calculator App Screenshot">
+          <div class="project-logo">🧮</div>
+        </div>
+        <div class="project-info">
+          <h3>Calculator App</h3>
+          <p>A simple, interactive calculator with keyboard support and animated UI. Try basic math operations live!</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <a href="#calculator-demo" class="open-calculator">Live Demo</a>
+        </div>
+      </div>
+      <!-- Memory Game Project Card -->
+      <div class="project-card">
+        <div class="project-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Memory Game Screenshot">
+          <div class="project-logo">🧠</div>
+        </div>
+        <div class="project-info">
+          <h3>Memory Game</h3>
+          <p>Test your memory! Flip cards to find pairs. Features smooth animations and increasing difficulty.</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <a href="#memory-game-demo" class="open-memory-game">Live Demo</a>
+        </div>
+      </div>
+      <!-- Add more project cards as needed -->
+    </div>
+  </section>
+  <!-- Reviews Section -->
+  <section id="reviews">
+    <h2>Reviews</h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <p>“A fantastic developer! Delivered above expectations.”</p>
+        <span>- Sophia L.</span>
+      </div>
+      <div class="review-card">
+        <p>“Creative, reliable, and a pleasure to work with.”</p>
+        <span>- Alex P.</span>
+      </div>
+      <div class="review-card">
+        <p>“Thomas is a true professional. His attention to detail and passion for code are unmatched.”</p>
+        <span>- Maria K.</span>
+      </div>
+      <div class="review-card">
+        <p>“Always delivers on time and goes the extra mile. Highly recommended!”</p>
+        <span>- Daniel S.</span>
+      </div>
+      <div class="review-card">
+        <p>“Working with Thomas was a pleasure. The results exceeded our expectations.”</p>
+        <span>- Priya R.</span>
+      </div>
+      <div class="review-card">
+        <p>“Innovative solutions and a great communicator. Will collaborate again!”</p>
+        <span>- Luca M.</span>
+      </div>
+    </div>
+    <button class="add-review-btn">Leave a Review</button>
+    <form class="add-review-form" style="display:none; margin-top:20px;">
+      <input type="text" name="reviewer" placeholder="Your Name or Initials" required style="margin-bottom:8px;">
+      <textarea name="review" placeholder="Your Review" required style="margin-bottom:8px;"></textarea>
+      <button type="submit">Submit Review</button>
+      <span class="review-form-status" style="display:block; margin-top:8px; color:#7ee787;"></span>
+    </form>
+  </section>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form" class="contact-form animated-contact">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+      <div class="form-status"></div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/thomas-m-/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Thomas-Mer" target="_blank">GitHub</a>
+    </div>
+  </section>
+  <script src="script.js"></script>
+  <!-- Modal for Tic-Tac-Toe Demo -->
+  <div id="tic-tac-toe-demo" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3 style="margin-top:0;">Tic-Tac-Toe</h3>
+      <div id="tic-tac-toe-board"></div>
+      <div id="tic-tac-toe-status"></div>
+      <button id="tic-tac-toe-restart">Restart</button>
+    </div>
+  </div>
+  <!-- Modal for To-Do App Demo -->
+  <div id="todo-app-demo" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3 style="margin-top:0;">To-Do App</h3>
+      <form id="todo-form" style="margin-bottom:16px; display:flex; gap:8px;">
+        <input id="todo-input" type="text" placeholder="Add a new task..." required style="flex:1; padding:8px; border-radius:6px; border:none;">
+        <button type="submit" style="background:#7ee787; color:#181a20; border:none; border-radius:6px; padding:8px 16px; font-weight:600; cursor:pointer;">Add</button>
+      </form>
+      <ul id="todo-list" style="list-style:none; padding:0; margin:0;"></ul>
+    </div>
+  </div>
+  <!-- Modal for Calculator Demo -->
+  <div id="calculator-demo" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3 style="margin-top:0;">Calculator</h3>
+      <div id="calculator-app"></div>
+    </div>
+  </div>
+  <!-- Modal for Memory Game Demo -->
+  <div id="memory-game-demo" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3 style="margin-top:0;">Memory Game</h3>
+      <div id="memory-game-app"></div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <span>&copy; 2025 Thomas M. All rights reserved.</span>
+      <span>Made with <span style="color:#7ee787;">&hearts;</span> | <a href="#hero">Back to top</a></span>
+    </div>
+  </footer>
+</body>
+</html>
