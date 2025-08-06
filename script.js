@@ -106,7 +106,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     // Initialize EmailJS (replace with your public key)
-    emailjs.init('C3VVgb0NynF8NXExv'); // <-- Replace with your EmailJS public key
+    emailjs.init('SuxR0U9rGwMacBsHN'); // <-- Replace with your EmailJS public key
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
       const status = contactForm.querySelector('.form-status');
@@ -118,7 +118,7 @@ window.addEventListener('DOMContentLoaded', () => {
         email: contactForm.email.value,
         message: contactForm.message.value
       };
-      emailjs.send('service_6e20obe', 'template_7khrtb1', params)
+      emailjs.send('service_f4ovrqg', 'template_q1s4rm6', params)
         .then(function() {
           status.textContent = 'Thank you! Your message has been sent.';
           status.style.color = '#7ee787';
